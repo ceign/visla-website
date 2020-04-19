@@ -1,0 +1,18 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+nav.c-navigation {
+  display: grid;
+  grid-template-columns: 10% 75% auto;
+  padding: 20px 40px;
+}
+
+@media (max-width: 990px) {
+  header {
+    @include border(2px, blue);
+    display: none;
+  }
+}

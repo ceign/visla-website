@@ -1,0 +1,20 @@
+.c-navigation__items {
+  @include flex-align(row, center, flex-end);
+  width: 100%;
+  list-style: none;
+
+  li {
+    margin-right: 2rem;
+
+    a {
+      font-family: $sen;
+      color: $text;
+      font-size: 1.1rem;
+      font-weight: 500;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.footer__contact {
+  h3 {
+    font-family: $sen;
+    color: $text;
+    font-weight: 500;
+    font-size: 2.25rem;
+  }
+
+  button {
+    @include border(1px, red);
+    background-color: $blanco;
+    padding: 0;
+    margin: 1rem 0 3.5rem;
+
+    a {
+      font-family: $sen;
+      color: $red;
+      font-weight: 800;
+      font-size: 20px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 1.3rem 3rem;
+      transition: none;
+    }
+
+    &:hover {
+      background-color: $red;
+
+      a {
+        color: $blanco;
+      }
+    }
+  }
+
+  p {
+    font-family: $sen;
+    color: $light-text;
+    font-size: 1.0625rem;
+  }
+
+  a {
+    @include transition(0.3s color ease);
+    font-family: $sen;
+    color: $red;
+    font-size: 1.0625rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer__contact {
+    padding: 3.5rem 1rem 1rem;
+
+    h3 {
+      font-size: 1.875rem;
+    }
+
+    button {
+      max-width: 250px;
+
+      a {
+        font-size: 1.25rem;
+        padding: 1rem;
+      }
+    }
+  }
+}

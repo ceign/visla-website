@@ -1,0 +1,14 @@
+.c-navigation__logo {
+  @include flex-align(row, center, center);
+  
+
+  a {
+    background-image: url('../static/img/visla_black.svg');
+    background-repeat:  no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 100%;
+    height: 65%;
+    outline: none;
+  }
+}

@@ -1,0 +1,21 @@
+.card-images__button-cta {
+  @include flex-align(row, center, center);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 0 5rem;
+}
+
+@media (max-width: 620px) {
+  .card-images__button-cta {
+    .c-button {
+      max-width: 250px;
+
+      button {
+        a {
+          font-size: 1.25rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

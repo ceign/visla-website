@@ -1,0 +1,29 @@
+.c-navigation__button {
+  @include flex-align(row, center, flex-start);
+  padding-left: 1rem;
+
+  button {
+    background-color: $red;
+    padding: 0.9rem 1.3rem;
+    width: auto;
+    border: none;
+    cursor: pointer;
+
+    a {
+      color: $blanco;
+      font-family: $sen;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: 1.15rem;
+    }
+
+    &:hover {
+      @include border(1px, $red);
+      background-color: $blanco;
+
+      a {
+        color: $red;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Visla</title>
+</head>
+
+<body>
+
+    <div class="full-wrapper">
+
+        <header>
+            {{> partials/Components/Home/Header/c-navigation}}
+        </header>
+
+
+
+
+
+        <main>
+            <div class="main__wrapper">
+                {{> partials/Components/Home/Main/main__title}}
+                {{> partials/Components/Home/Main/main__cards}}
+            </div>
+        </main>
+
+
+
+
+
+        <section class="card-images">
+            <div class="card-images__wrapper">
+                {{> partials/Components/Home/Cards/c-card-image}}
+            </div>
+            <div class="card-images__button-cta">
+                {{> partials/Components/Global/c-button-red}}
+            </div>
+        </section>
+
+
+
+
+
+        <section class="testimonials">
+            <div class="testimonials__wrapper">
+                {{> partials/Components/Home/Testimonials/c-testimonials}}
+            </div>
+        </section>
+
+
+
+
+
+        <section class="partners">
+            <div class="partners__wrapper">
+                {{> partials/Components/Home/Partners/partners__title}}
+                {{> partials/Components/Home/Partners/c-partners}}
+            </div>
+        </section>
+
+
+
+
+        <section class="cta">
+            <div class="cta__wrapper">
+                {{> partials/Components/Home/CTA/cta__text}}
+                {{> partials/Components/Global/c-button-white}}
+            </div>
+        </section>
+
+
+
+
+
+        <section class="lets-code">
+            <div class="lets-code__wrapper">
+                {{> partials/Components/Home/Lets-Code/lets-code__text}}
+                {{> partials/Components/Home/Lets-Code/c-lets-code-button}}
+            </div>
+        </section>
+
+
+
+
+        <footer>
+            <div class="footer__wrapper">
+                {{> partials/Components/Home/Footer/footer__contact}}
+                {{> partials/Components/Home/Footer/footer__menu}}
+                {{> partials/Components/Home/Footer/footer__bottom}}
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

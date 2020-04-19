@@ -1,0 +1,78 @@
+.c-card {
+  width: auto;
+  height: auto;
+
+  a {
+    @include flex-align(column, initial, space-between);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+
+    .c-card__image {
+      height: 72px;
+      margin: 2rem 0;
+    }
+
+    .c-card__text {
+      margin: 0 0 2rem;
+
+      h3 {
+        font-family: $sen;
+        color: $text;
+        font-size: 1.75rem;
+        font-weight: 400;
+      }
+    }
+
+    .c-card__arrow {
+      margin: 1rem 0;
+
+      span {
+        background-color: $red;
+        transition-duration: .35s;
+        transition-timing-function: ease;
+        position: relative;
+        display: block;
+        width: 26px;
+        height: 3px;
+
+        &::before {
+          content: "";
+          background-color: $red;
+          transition-duration: .35s;
+          position: absolute;
+          bottom: 4px;
+          right: -3px;
+          width: 14px;
+          height: 3px;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          content: "";
+          background-color: $red;
+          position: absolute;
+          transition-duration: .35s;
+          bottom: -4px;
+          right: -3px;
+          width: 14px;
+          height: 3px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &:hover {
+      span {
+        background-color: $text;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.12, 3.09);
+        transform: translateX(10px);
+
+        &::after,
+        &::before {
+          background-color: $text;
+        }
+      }
+    }
+  }
+}

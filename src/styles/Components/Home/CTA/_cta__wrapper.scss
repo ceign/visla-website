@@ -1,0 +1,23 @@
+.cta__wrapper {
+  @include flex-align(column, center, center);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 5rem 9rem;
+}
+
+@media (max-width: 620px) {
+  .cta__wrapper {
+    padding: 3.5rem 0rem 9rem;
+
+    .c-button {
+      max-width: 250px;
+      
+      button {
+        a {
+          font-size: 1.25rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

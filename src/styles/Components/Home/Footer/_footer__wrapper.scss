@@ -1,0 +1,27 @@
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3.5rem 0 1.5rem;
+}
+
+@media (max-width: 1050px) {
+  .footer__wrapper {
+    padding: 3.5rem 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .footer__wrapper {
+    grid-template-columns: 1fr;
+    padding: 3.5rem 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer__wrapper {
+    padding: 0;
+  }
+}

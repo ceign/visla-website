@@ -1,0 +1,10 @@
+.c-partners {
+  @include flex-align(row, center, center);
+  padding: 1rem;
+}
+
+@media (max-width: 620px) {
+  .c-partners {
+    min-height: 90px;
+  }
+}

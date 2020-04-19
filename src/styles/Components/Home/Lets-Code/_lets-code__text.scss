@@ -1,0 +1,41 @@
+.lets-code__wrapper {
+  h2 {
+    font-family: $sen;
+    color: $text;
+    font-weight: 500;
+    font-size: 84px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: $sen;
+    color: $text;
+    font-size: 32px;
+    margin: 2.7rem 0 3.7rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .lets-code__wrapper {
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .c-button {
+      max-width: 250px;
+
+      button {
+        a {
+          font-size: 1.25rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

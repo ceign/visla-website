@@ -1,0 +1,17 @@
+div.main__wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10rem 0 5rem;
+}
+
+@media (max-width: 990px) {
+  div.main__wrapper {
+    padding: 10rem 3rem 5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  div.main__wrapper {
+    padding: 6.5rem 1rem 5rem;
+  }
+}
