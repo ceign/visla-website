@@ -92,7 +92,7 @@ nav.c-navigation-mobile {
   }
 
   .c-navigation-mobile__items {
-    @include transition(0.4s width ease-in);
+    @include transition(0.3s width ease-in);
     @include flex-align(column, inherit, center);
     background-color: $blanco;
     position: absolute;
@@ -146,6 +146,7 @@ nav.c-navigation-mobile {
 
     &--active {
       opacity: 1;
+      z-index: 1;
     }
   }
 }
