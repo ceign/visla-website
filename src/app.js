@@ -69,7 +69,59 @@ navigationItems.forEach((el, pos) => {
 });
 
 /**
- * FIN HEADER
+ * END HEADER
+ */
+
+/**
+ * HEADER MOBILE MENU
+ */
+
+let boxButton = document.querySelector(
+  "nav.c-navigation-mobile .c-navigation-mobile__button button"
+);
+
+boxButton.addEventListener("click", () => {
+  let mobileButton = document.querySelector(
+    "nav.c-navigation-mobile .c-navigation-mobile__button"
+  );
+  let mobileNavigation = document.querySelector(
+    "nav.c-navigation-mobile .c-navigation-mobile__items"
+  );
+  let fullWrapper = document.querySelector("body .full-wrapper");
+  let mobileOverlay = document.querySelector(
+    "nav.c-navigation-mobile .c-navigation-mobile__overlay"
+  );
+
+  //Button Transition
+  mobileButton.classList.toggle("c-navigation-mobile__button--active");
+
+  //Show Menu Active
+  mobileNavigation.classList.toggle("c-navigation-mobile__items--active");
+
+  //Non Scroll to Show Menu
+  fullWrapper.classList.toggle("non-scroll");
+
+  //Overlay
+  mobileOverlay.classList.toggle("c-navigation-mobile__overlay--active");
+
+  //Close Menu
+  mobileOverlay.addEventListener("click", () => {
+    //Initial Position Button
+    mobileButton.classList.remove("c-navigation-mobile__button--active");
+
+    //Remove Active Menu
+    mobileNavigation.classList.remove("c-navigation-mobile__items--active");
+
+    //Remove Non Scroll to Show Menu
+    fullWrapper.classList.remove("non-scroll");
+
+    //Remove Overlay
+    mobileOverlay.classList.remove("c-navigation-mobile__overlay--active");
+  });
+});
+
+/**
+ * END HEADER MOBILE MENU
  */
 
 /**
@@ -91,6 +143,7 @@ mainParagraph[0].innerHTML =
 
 let cardItem = document.querySelectorAll(".c-card a");
 
+//Gray Background Transition
 cardItem.forEach((el, pos) => {
   cardItem[pos].addEventListener("mouseenter", (e) => {
     cardItem[pos].style.background = "#eff3f5";
@@ -104,7 +157,7 @@ cardItem.forEach((el, pos) => {
 });
 
 /**
- * FIN MAIN SECTION
+ * END MAIN SECTION
  */
 
 /**
@@ -162,7 +215,7 @@ let textGreenCard = document.querySelector(
 textGreenCard.innerHTML = greenCard.text;
 
 /**
- * FIN CARDS SECTION
+ * END CARDS SECTION
  */
 
 /**
@@ -261,7 +314,7 @@ let opinionThirdTestimonial = document.querySelectorAll(
 opinionSecondTestimonial[2].innerHTML = testimonial3.opinion;
 
 /**
- * FIN TESTIMONIALS SECTION
+ * END TESTIMONIALS SECTION
  */
 
 /**
@@ -274,7 +327,7 @@ let titlePartners = document.querySelector(
 titlePartners.innerHTML = "Con la confianza de:";
 
 /**
- * FIN PARTNERS SECTION
+ * END PARTNERS SECTION
  */
 
 /**
@@ -286,7 +339,7 @@ textCTA.innerHTML =
   "Con un enfoque en la confiabilidad, desarrollamos <span>productos móviles y web multiplataforma</span> para fomentar el crecimiento de su negocio.";
 
 /**
- * FIN CTA SECTION
+ * END CTA SECTION
  */
 
 /**
@@ -300,7 +353,7 @@ let textCode = document.querySelector(".lets-code .lets-code__wrapper p");
 textCode.innerHTML = "Qué podemos construir para ti hoy?";
 
 /**
- * FIN LETS CODE SECTION
+ * END LETS CODE SECTION
  */
 
 /**
@@ -370,3 +423,7 @@ let stackList = document.querySelectorAll(
 stackFooter.forEach((el, pos) => {
   stackList[pos].innerHTML = el;
 });
+
+/**
+ * END FOOTER
+ */
