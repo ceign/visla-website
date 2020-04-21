@@ -1,6 +1,12 @@
 nav.c-navigation-mobile {
+  @include transition(0.3s all ease-in-out);
+  background-color: $blanco;
+  width: 100%;
+  position: fixed;
+  top: 0;
   display: block;
   padding: 1rem;
+  z-index: 10;
 
   .c-navigation-mobile__header {
     @include flex-align(row, center, space-between);
@@ -27,8 +33,9 @@ nav.c-navigation-mobile {
         background-color: unset;
         border: unset;
         padding: 0;
+        outline: none;
 
-        a {
+        div {
           position: relative;
           display: block;
           width: 100%;
@@ -69,7 +76,7 @@ nav.c-navigation-mobile {
 
       &--active {
         button {
-          a {
+          div {
             span {
               visibility: hidden;
 
@@ -92,15 +99,15 @@ nav.c-navigation-mobile {
   }
 
   .c-navigation-mobile__items {
-    @include transition(0.3s width ease-in);
+    @include transition(0.3s all ease-in);
     @include flex-align(column, inherit, center);
     background-color: $blanco;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     margin: 0;
     padding: 0;
-    width: 0;
+    width: 70%;
     height: 100%;
     list-style: none;
     z-index: 8;
@@ -129,7 +136,7 @@ nav.c-navigation-mobile {
     &--active {
       @include flex-align(column, inherit, center);
       position: fixed;
-      width: 70%;
+      right: 0;
     }
   }
 
@@ -138,15 +145,17 @@ nav.c-navigation-mobile {
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 200vh;
     background: rgba(1, 33, 51, 0.7);
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
+    pointer-events: none;
 
     &--active {
       opacity: 1;
       z-index: 1;
+      pointer-events: all;
     }
   }
 }
