@@ -1,8 +1,11 @@
 nav.c-navigation {
+  @include transition(0.3s all ease-in-out);
+  background-color: $blanco;
   display: grid;
   grid-template-columns: 10% 75% auto;
   padding: 20px 40px;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 10;
 }

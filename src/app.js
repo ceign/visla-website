@@ -68,6 +68,36 @@ navigationItems.forEach((el, pos) => {
   itemText[pos].innerHTML = el;
 });
 
+let posPrincipal = window.pageYOffset;
+
+window.onscroll = function () {
+  let posActual = window.pageYOffset;
+
+  let navigationMenu = document.querySelector("header nav.c-navigation");
+  let navigationMenuMobile = document.querySelector(
+    "header nav.c-navigation-mobile"
+  );
+
+  if (posPrincipal >= posActual) {
+    navigationMenu.style.top = "0";
+    navigationMenu.style.boxShadow = "0 5px 15px rgba(1,33,51,.1)";
+
+    navigationMenuMobile.style.top = "0";
+    navigationMenuMobile.style.boxShadow = "0 5px 15px rgba(1,33,51,.1)";
+  } else {
+    navigationMenu.style.top = "-100px";
+
+    navigationMenuMobile.style.top = "-100px";
+  }
+
+  posPrincipal = posActual;
+
+  if (posPrincipal == 0 && posActual == 0) {
+    navigationMenu.style.boxShadow = "0 0 0 #fff";
+    navigationMenuMobile.style.boxShadow = "0 0 0 #fff";
+  }
+};
+
 /**
  * END HEADER
  */
@@ -98,9 +128,6 @@ boxButton.addEventListener("click", () => {
   //Show Menu Active
   mobileNavigation.classList.toggle("c-navigation-mobile__items--active");
 
-  //Non Scroll to Show Menu
-  fullWrapper.classList.toggle("non-scroll");
-
   //Overlay
   mobileOverlay.classList.toggle("c-navigation-mobile__overlay--active");
 
@@ -111,9 +138,6 @@ boxButton.addEventListener("click", () => {
 
     //Remove Active Menu
     mobileNavigation.classList.remove("c-navigation-mobile__items--active");
-
-    //Remove Non Scroll to Show Menu
-    fullWrapper.classList.remove("non-scroll");
 
     //Remove Overlay
     mobileOverlay.classList.remove("c-navigation-mobile__overlay--active");
