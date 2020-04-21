@@ -86,7 +86,6 @@ window.onscroll = function () {
     navigationMenuMobile.style.boxShadow = "0 5px 15px rgba(1,33,51,.1)";
   } else {
     navigationMenu.style.top = "-100px";
-
     navigationMenuMobile.style.top = "-100px";
   }
 
