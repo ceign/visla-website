@@ -8,6 +8,7 @@
 
 import "./styles/main.scss";
 import "./static/img/visla_black.svg";
+import "./static/img/icon.png";
 import "./static/img/web.svg";
 import "./static/img/mobile.svg";
 import "./static/img/ai.svg";
@@ -140,6 +141,25 @@ boxButton.addEventListener("click", () => {
 
     //Remove Overlay
     mobileOverlay.classList.remove("c-navigation-mobile__overlay--active");
+  });
+
+  //Spanish Items
+  var listMenuMobile = [
+    "Inicio",
+    "Nuestro Trabajo",
+    "Servicios",
+    "Calidad",
+    "Artículos",
+    "Sobre Nosotros",
+    "Contácto",
+  ];
+
+  let textItemsMenuMobile = document.querySelectorAll(
+    ".c-navigation-mobile .c-navigation-mobile__items li a"
+  );
+
+  listMenuMobile.forEach((el, pos) => {
+    textItemsMenuMobile[pos].innerHTML = el;
   });
 });
 

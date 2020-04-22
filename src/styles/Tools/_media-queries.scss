@@ -10,6 +10,7 @@
     4. Ancho mínimo de 1024px   (Vistas tabletas medianas)
     5. Ancho mínimo de 1200px   (Vistas escritorio pequeño)
     6. Ancho mínimo de 1440px   (Vistas escritorio medio)
+    7. Orientación Landscape
  */
 
 /**
@@ -66,6 +67,15 @@ $screen-md: 1440px;
 
 @mixin md {
   @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+//7. landscape views
+$landscape: 820px;
+
+@mixin landscape {
+  @media (max-width: #{$landscape}) and (orientation: landscape) {
     @content;
   }
 }

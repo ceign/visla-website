@@ -115,7 +115,7 @@ nav.c-navigation-mobile {
 
     li {
       @include flex-align(row, center, flex-start);
-      width: max-content;
+      width: 100%;
       height: 60px;
       padding-left: 2rem;
 
@@ -124,6 +124,7 @@ nav.c-navigation-mobile {
         font-family: $sen;
         color: $text;
         font-size: 24px;
+        outline: none;
       }
 
       &:hover {
@@ -163,5 +164,13 @@ nav.c-navigation-mobile {
 @media (min-width: 991px) {
   nav.c-navigation-mobile {
     display: none;
+  }
+}
+
+@include landscape {
+  nav.c-navigation-mobile {
+    .c-navigation-mobile__items {
+      padding: 2rem;
+    }
   }
 }
