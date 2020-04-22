@@ -72,7 +72,7 @@ $screen-md: 1440px;
 }
 
 //7. landscape views
-$landscape: 820px;
+$landscape: 855px;
 
 @mixin landscape {
   @media (max-width: #{$landscape}) and (orientation: landscape) {
